@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Poppins';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #162138;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* designing of scroll bar */
+::-webkit-scrollbar {
+    width: 0.575rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #55aeed;
+}
+
+/* animation */
+.role {
+    color: #55aeed;
+    font-weight: bold;
+    border-right: 2px solid;
+    padding-right: 5px;
+    animation: blinkCursor 0.7s infinite;
+}
+
+@keyframes blinkCursor {
+    0% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #55aeed;
+    }
+
+    100% {
+        border-color: transparent;
+    }
+}
+/* animation end */
+
+/* navbar start */
+.navbar {
+    padding: 10px;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus {
+    color: black;
+    border: 0;
+    box-shadow: none;
+    line-height: 2;
+}
+
+.nav-item {
+    margin: 0 0.625rem;
+}
+
+.nav-item .nav-link:hover,
+.nav-item .nav-link:focus,
+.nav-item .nav-link.active {
+    color: #55aeed;
+    font-weight: 500;
+}
+
+.navbar.header-scrolled {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: white;
+    box-shadow: 0.5084rem 1.1419rem 2.5rem 0 rgb(0 0 0 / 8%);
+    transition: 0.3s ease-in-out;
+}
+
+.menu-navbar-nav {
+    text-align: center;
+}
+
+/* Active NavLink Underline */
+.nav-item .nav-link {
+    position: relative;
+    font-size: 1.125rem;
+    color: white;
+    font-weight: 400;
+    display: inline-block;
+    padding-bottom: 5px; /* space for underline */
+}
+
+.nav-item .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* thickness of the underline */
+    background-color: #55aeed;
+    transition: width 0.2s ease-in-out;
+}
+
+.nav-item .nav-link:hover::after,
+.nav-item .nav-link:focus::after,
+.nav-item .nav-link.active::after {
+    width: 100%;
+}
+/* navbar end */
+
+/* home page */
+.main_page h1 {
+    cursor: pointer;
+    font-size: 50px;
+    font-family: 'Poppins';
+}
+
+.social_links {
+    margin-top: 40px;
+}
+
+.social_links i {
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+}
+
+.social_links i:hover {
+    background-color: #007bff;
+    transform: translateY(-0.25rem);
+    transition: all .5s ease-in-out;
+}
+
+.cv {
+    background-color: #007bff;
+    padding: 12px 20px 12px 20px;
+    margin-top: 15px;
+    border-radius: 15px;
+    border: 2px solid rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.cv:hover {
+    box-shadow: 2px 0px 10px #ddd;
+}
+
+.profile {
+    animation: movebounce 4s ease-in-out infinite;
+    box-shadow: 3px 0px 25px #ddd;
+}
+
+@keyframes movebounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-1rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+/* home page end */
+
+/* about */
+#about {
+    background-color: #242b40;
+}
+
+.about_heading {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.about_heading1 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* Enhanced Services Section */
+.span {
+    color: #55aeed;
+    font-weight: 600;
+}
+
+#services .card {
+    padding: 30px 40px;
+    margin-bottom: 20px;
+    background-color: #242b40;
+    border-radius: 15px;
+}
+
+#services .card:hover {
+    border: 3px solid #55aeed;
+    transform: scale(1.01px);
+}
+
+#services i {
+    color: #55aeed;
+    font-size: 3.5rem;
+}
+
+/* skill */
+#skills {
+    margin-bottom: 50px;
+    background-color: #242b40;
+}
+
+.skill1 {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.progress-bar-section {
+    margin-bottom: 20px;
+}
+
+.progress {
+    background-color: #434343;
+    height: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 75%;
+}
+
+.progress-bar {
+    background-color: #55aeed;
+    height: 100%;
+    text-align: right;
+    padding-right: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    color: black;
+}
+
+/* portfolio */
+.title {
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.content .content-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay {
+    opacity: 1;
+}
+
+img {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+}
+
+.content-details h3 {
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.content-details p {
+    color: #fff;
+    font-size: 12px;
+}
+
+.fadeIn-bottom {
+    top: 80%;
+}
+
+/* Enhanced Contact Form */
+#contact-form {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#contact-form .form-floating input,
+#contact-form .form-floating textarea {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+#contact-form .form-floating label {
+    color: #aaa;
+}
+
+#contact-form .form-floating input:focus,
+#contact-form .form-floating textarea:focus {
+    background-color: #444;
+    border-color: #555;
+    box-shadow: none;
+}
+
+#contact-form button {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+footer {
+    position: relative;
+}
+
+/* Scroll Back To Top */
+#scrollUp {
+    position: fixed;
+    right: 2%;
+    bottom: 3%;
+    height: 2.813rem;
+    width: 2.5rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    cursor: pointer;
+    z-index: 500;
+    color: white;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+    background: #55aeed;
+}
+
+#scrollUp.scrollActive {
+    display: block;
+}
